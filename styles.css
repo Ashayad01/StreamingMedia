@@ -1,0 +1,15 @@
+
+
+
+/* Navegation Menu */
+nav {
+   background-color: pink;
+}
+ ul {
+    display: flex;
+ }
+
+ li a {
+    
+    margin: 20px;
+ }
