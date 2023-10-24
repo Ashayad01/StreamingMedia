@@ -1,15 +1,10 @@
-
-
-
-/* Navegation Menu */
-nav {
-   background-color: pink;
+body {
+   display: grid;
 }
- ul {
-    display: flex;
- }
 
- li a {
-    
-    margin: 20px;
- }
+header {
+   grid-row: 2/3;
+}
+nav {
+   grid-row: 1/2;
+}
