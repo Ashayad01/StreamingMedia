@@ -11,114 +11,124 @@
         <h1>Smooth Jazz</h1>
             <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.
             </p>
-        </header>
-    <main>
-        <nav id="nav-bar">
-            <ul class="nav-selection">
-                <li><a href="#home"><h2>MuzaMaker</h2></a></li>
-                <li><a href="#trending">Trending Songs</a></li>
-                <li><a href="#your">Your Playlist</a></li>
-                <li><a href="#curated">Curated Playlist</a></li>
-                <li><img src="images/duke-silver.png" alt="Duke Silver Logo" class="duke-silver"></li>
-            </ul>   
-        </nav>
-        <section>
+    </header>
+    <nav>
+        <ul class="nav-selection">
             
-            <div class="trending_song-container">
-                <div>
-                    <h3>Aloma</h3>
-                    <img src="images/aloma-cover.png" alt="Aloma Img">
-                    <p>Artist Cali</p>
-                    <audio>
-                        <source src="aloma.mp3" type="audio/mpeg" >
-                    </audio>
-                </div>
-                <div>
-                    <h3>My Road</h3>
-                    <img src="images/my-road-cover.png" alt="Road Image">
-                    <p>Artist Nesterouk</p>
-                    
-                </div>
-                <div>
-                    <h3>Papaya</h3>
-                    <img src="images/papaya-cover.png" alt="Papaya Image">
-                    <p>Artist Dredstudio</p>
-                    
-                </div>
-                <div>
-                    <h3>Smoothies</h3>
-                    <img src="images/smoothies-cover.png" alt="Smoothie Image">
-                    <p>Artist Black Rhomb</p>
-                    
-                </div>
-                <div>
-                    <h3>Successful Performance</h3>
-                    <img src="images/successful-performance-cover.png" alt="Successful Image">
-                    <p>Artist Ricky Bombino</p>
-                    
-                </div>
-            </div>
-            <div class="btn">
-                <button>More Trending</button>
-            </div>
-        </section>
+            <li><a href="#Home"><h2>MuzaMaker</h2></a></li>
+            <li><a href="#trending">Trending Songs</a></li>
+            <li><a href="#your">Your Playlist</a></li>
+            <li><a href="#curated">Curated Playlist</a></li>
+            <li><a href="#silver"><img src="images/duke-silver.png" alt="Duke Silver Logo" class="duke-silver"></a></li>
+        </ul>   
+    </nav>
+    <main>
         <section>
+            <h2>Trending Songs</h2>
+            <div class="trending_song-container">   
+                <div class="song">
+                    <img src="images/aloma-cover.png" alt="Aloma Img">
+                    <h3 >Aloma</h3>
+                    <p>Artist Cali</p>
+                </div>
+                <div class="song">
+                    <img src="images/my-road-cover.png" alt="Road Image">
+                    <h3>My Road</h3>
+                    <p>Artist Nesterouk</p>  
+                </div>
+                <div class="song">
+                    <img src="images/papaya-cover.png" alt="Papaya Image">
+                    <h3>Papaya</h3>
+                    <p>Artist Dredstudio</p>
+                </div>
+                <div class="song">  
+                    <img src="images/smoothies-cover.png" alt="Smoothie Image">
+                    <h3>Smoothies</h3>
+                    <p>Artist Black Rhomb</p>
+                </div>
+                <div class="song">
+                    <img src="images/successful-performance-cover.png" alt="Successful Image">
+                    <h3>Successful Performance</h3>
+                    <p>Artist Ricky Bombino</p>
+                </div>
+            </div>
+            <button class="btn">More Trending</button>
+        </section>
+        <section id="playlist">
             <div class="your_playlist-container">
                 <h2>Your Playlists</h2>
-                <div class="songs-container">
-                    <div>
+                <div class="your_songs-container">
+                    <div class="your">
                         <img src="./images/best-of-2020-cover.png" alt="2020 Image">
-                        <h3>Best of 2020</h3>
-                        <p>The music that got you through the lock down.</p>
+                        <div class="song_text">
+                            <h3>Best of 2020</h3>
+                            <p>The music that got you through the lock down.</p>
+                        </div>
                     </div>
-                    <div>
+                    <div class="your">
                         <img src="./images/pumpkin-spice-cover.png" alt="Coffee Cup">
-                        <h3>Pumpkin Spice</h3>
-                        <p>Creamy and spicy, just like your favorite autumnal latte.</p>
+                        <div class="song_text">
+                            <h3>Pumpkin Spice</h3>
+                            <p>Creamy and spicy, just like your favorite autumnal latte.</p>
+                        </div>
                     </div>
-                    <div>
+                    <div class="your">
                         <img src="./images/quiet-storm-cover.png" alt="storm clouds">
-                        <h3>Quiet Storm</h3>
-                        <p>The pioneers of smooth jazz</p>
+                        <div class="song_text">
+                            <h3>Quiet Storm</h3>
+                            <p>The pioneers of smooth jazz</p>
+                        </div>
                     </div>
-                    <div>
+                    <div class="your">
                         <img src="./images/smooth-study-cover.png" alt="Man on Computer">
-                        <h3>Smooth Study</h3>
-                        <p>Background music to keep you going while you study.</p>
+                        <div class="song_text">
+                            <h3>Smooth Study</h3>
+                            <p>Background music to keep you going while you study.</p>
+                        </div>
                     </div>
-                    <button>All Your Playlist</button>
                 </div>
+                <button class="btn">All Your Playlist</button>
             </div>
             <div class="curated_playlists-container">
-                <h2>Your Playlists</h2>
-                <div class="songs-container">
-                    <div>
+                <h2>Curated Playlists</h2>
+                <div class="curated_songs-container">
+                    <div class="curated">
                         <img src="./images/boozy-brunch-cover.png" alt="People Cheers">
-                        <h3>Boozy Brunch</h3>
-                        <p>Light up the afternoon with these energetic hits.</p>
+                        <div class="song_text">
+                            <h3>Boozy Brunch</h3>
+                            <p>Light up the afternoon with these energetic hits.</p>
+                        </div>
                     </div>
-                    <div>
+                    <div class="curated">
                         <img src="./images/dinner-party-cover.png" alt="Tabel">
-                        <h3>Dinner Party</h3>
-                        <p>Background music to give your party life, but allow your guests to chat.</p>
+                        <div class="song_text">
+                            <h3>Dinner Party</h3>
+                            <p>Background music to give your party life, but allow your guests to chat.</p>
+                        </div> 
                     </div>
-                    <div>
+                    <div class="curated">
                         <img src="./images/mellow-cover.png" alt="Park bench">
-                        <h3>Mellow</h3>
-                        <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
+                        <div class="song_text">
+                            <h3>Mellow</h3>
+                            <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
+                        </div>
                     </div>
-                    <div>
+                    <div class="curated">
                         <img src="./images/jazz-chill-cover.png" alt="chill jazz">
-                        <h3>Jazz and Chill</h3>
-                        <p>Set the mood with these silky sounds.</p>
+                        <div class="song_text">
+                            <h3>Jazz and Chill</h3>
+                            <p>Set the mood with these silky sounds.</p>
+                        </div>
                     </div>
-                    <div>
+                    <div class="curated">
                         <img src="./images/smooth-saxophone-cover.png" alt="Saxophone">
-                        <h3>Jazz Saxophone</h3>
-                        <p>The greatest collection of your sax favorites.</p>
+                        <div class="song_text">
+                            <h3>Jazz Saxophone</h3>
+                            <p>The greatest collection of your sax favorites.</p>
+                        </div>
                     </div>
-                    <button>More Curated</button>
                 </div>
+                <button class="btn">More Curated</button>
             </div>
         </section>
     </main>

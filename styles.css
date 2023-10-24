@@ -1,10 +1,146 @@
-body {
-   display: grid;
+html{
+   background-color: #020659;
+   margin: 0 auto;
 }
 
-header {
-   grid-row: 2/3;
+body {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   display: grid;
+   grid-template-areas: 
+   "nav"
+   "header"
+   "main"
+   "footer";
+   gap: 0;
 }
+
+/* Header Bar */
+header {
+   grid-area: header;
+   background-color: #020873;
+   color: #FFFFFF;
+   padding: 20px;
+}
+
+/* Nav Bar */
+
 nav {
-   grid-row: 1/2;
+   grid-area: nav;
+   overflow: hidden;
+   background-color: #030ABC;
+}
+
+nav ul {
+   display: flex;
+  
+}
+
+nav li {
+   list-style: none;
+}
+
+nav a {
+   text-decoration: none;
+   text-align: center;
+   display: block;
+   margin: 60px;
+   color: #FFFFFF;
+   font-size: 1em;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+nav a:hover {
+   background-color: #590242;
+  
+}
+
+
+main {
+   grid-area: main;
+   background-color: #FFFFFF;
+}
+
+
+/* Trending Songs */
+
+.trending_song-container {
+   display: flex;
+   margin: 10px;
+}
+
+.song {
+   margin: 10px;
+}
+
+/* Your Playlists */
+
+#playlist {
+   display: grid;
+   grid-template-areas: 
+   "your curated";
+}
+
+.your_playlist-container {
+   grid-area: your;
+}
+
+.your_songs-container {
+   background-color: #2699fb;
+}
+
+.your {
+   background-color: #0d8dfb;
+   display: flex;
+   margin: 20px;
+   padding: 10px;
+}
+
+.curated_playlists-container {
+   grid-area: curated;
+}
+
+.curated_songs-container {
+   background-color: #2104D9;
+}
+
+.curated {
+   background-color: #030ABC;
+   display: flex;
+   margin: 20px;
+   padding: 10px;
+}
+
+.song_text {
+   color: #FFFFFF;
+   text-align: center;
+}
+
+/* Buttons */
+
+.btn {
+   float: right;
+   margin-right: 10px;
+   padding: 15px 40px;
+   background-color: #590242;
+   color: #FFFFFF;
+   font-size: 1em;
+   text-align: center;
+   text-decoration: none;
+   border: none;
+}
+
+.btn:hover {
+   background-color: #020659;
+   cursor: pointer;
+}
+/* Footer */
+footer {
+   grid-area: footer;
+   background-color: #FFFFFF;
+   color: #590242;
+   font-weight: bold;
+   text-align: center;
+   padding: 10px;
+   font-size: .75em;
 }
