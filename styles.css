@@ -26,6 +26,7 @@ header {
 
 nav {
    grid-area: nav;
+   display: flex;
    overflow: hidden;
    background-color: #030ABC;
 }
@@ -52,9 +53,7 @@ nav a {
 
 nav a:hover {
    background-color: #590242;
-  
 }
-
 
 main {
    grid-area: main;
@@ -143,4 +142,8 @@ footer {
    text-align: center;
    padding: 10px;
    font-size: .75em;
+}
+
+@media  (min-width:375px) {
+   
 }
