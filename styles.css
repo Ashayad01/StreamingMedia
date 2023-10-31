@@ -1,22 +1,19 @@
 html{
    background-color: #020659;
-   margin: 0 auto;
 }
 
 body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   margin: 0 auto;
+   max-width: 875px;
+   min-width: 375px;
    display: grid;
-   grid-template-areas: 
-   "nav"
-   "header"
-   "main"
-   "footer";
    gap: 0;
 }
 
 /* Header Bar */
 header {
-   grid-area: header;
+   grid-row: 2/3;
    background-color: #020873;
    color: #FFFFFF;
    padding: 20px;
@@ -25,125 +22,111 @@ header {
 /* Nav Bar */
 
 nav {
-   grid-area: nav;
-   display: flex;
-   overflow: hidden;
+   grid-row: 1/2;
+   text-transform: uppercase;
    background-color: #030ABC;
+   position: relative;
 }
 
 nav ul {
-   display: flex;
-  
+  text-align: center;
 }
 
-nav li {
+nav h2 {
+   visibility: hidden;
+   height: 1px;
+}
+
+ul {
    list-style: none;
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height .2s ease-out;
 }
 
-nav a {
-   text-decoration: none;
-   text-align: center;
+li a {
    display: block;
-   margin: 60px;
-   color: #FFFFFF;
-   font-size: 1em;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
-}
-
-nav a:hover {
-   background-color: #590242;
-}
-
-main {
-   grid-area: main;
-   background-color: #FFFFFF;
-}
-
-
-/* Trending Songs */
-
-.trending_song-container {
-   display: flex;
-   margin: 10px;
-}
-
-.song {
-   margin: 10px;
-}
-
-/* Your Playlists */
-
-#playlist {
-   display: grid;
-   grid-template-areas: 
-   "your curated";
-}
-
-.your_playlist-container {
-   grid-area: your;
-}
-
-.your_songs-container {
-   background-color: #2699fb;
-}
-
-.your {
-   background-color: #0d8dfb;
-   display: flex;
-   margin: 20px;
-   padding: 10px;
-}
-
-.curated_playlists-container {
-   grid-area: curated;
-}
-
-.curated_songs-container {
-   background-color: #2104D9;
-}
-
-.curated {
-   background-color: #030ABC;
-   display: flex;
-   margin: 20px;
-   padding: 10px;
-}
-
-.song_text {
-   color: #FFFFFF;
-   text-align: center;
-}
-
-/* Buttons */
-
-.btn {
-   float: right;
-   margin-right: 10px;
-   padding: 15px 40px;
-   background-color: #590242;
-   color: #FFFFFF;
-   font-size: 1em;
-   text-align: center;
+   padding: 20px 20px;
    text-decoration: none;
-   border: none;
+   color: #FFFFFF;
 }
 
-.btn:hover {
-   background-color: #020659;
+[href="#home"] {
+   text-transform: capitalize;
+   font-variant: small-caps;
+   font-size: 30px;
+   padding: 16px 16px;
+   position: absolute;
+   top: 0px;
+   left: 10em;
+   z-index: 1;
+}
+
+a:hover, input:hover {
+   background-color: #590242;
+}
+
+label {
    cursor: pointer;
-}
-/* Footer */
-footer {
-   grid-area: footer;
-   background-color: #FFFFFF;
-   color: #590242;
-   font-weight: bold;
-   text-align: center;
-   padding: 10px;
-   font-size: .75em;
+   padding: 28 20px;
+   position: relative;
+   user-select: none;
 }
 
-@media  (min-width:375px) {
-   
+label span {
+   background-color: #FFFFFF;
+   display: block;
+   height: 2px;
+   position: relative;
+   transition: background-color .2s ease-out;
+   width: 18px;
+   margin: 15px;
+}
+
+label span:before, label span:after {
+   background: #ffffff;
+   content: '';
+   display: block;
+   height: 100%;
+   position: absolute;
+   transition: all .2s ease-out;
+   width: 100%;
+}
+label span:before {
+   top: 5px;
+}
+label span:after {
+   top: -5px;
+}
+input {
+   display: none;
+}
+input:checked ~ ul {
+   max-height: 500px;
+}
+input:checked ~ label span {
+   background: transparent;
+}
+input:checked ~ label span:before {
+   transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+   transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+   top: 0;
+}
+
+
+@media screen and (min-width:834px) {
+   ul {
+       overflow: visible;
+       position: absolute;
+       top: 0;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   }
+   label span, input {
+       display: none;
+   }
 }

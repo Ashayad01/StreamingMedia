@@ -14,19 +14,20 @@
     </header>
     <nav>
         <h2>MuzaMaker</h2>
-        <input class="menu-btn" type="checkbox" id="menu-btn"/>
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <input type="checkbox" id="dropdown" />
+        <label for="dropdown"><span></span></label>
         <ul class="nav-selection">
-            <li><a href="#trending">Trending Songs</a></li>
-            <li><a href="#your">Your Playlist</a></li>
-            <li><a href="#curated">Curated Playlist</a></li>
+            <li><a href="#home">MuzakMaker</a></li>
+            <li><a href="#trending">Trending <br />Songs</a></li>
+            <li><a href="#your">Your <br />Playlist</a></li>
+            <li><a href="#curated">Curated <br />Playlist</a></li>
             <li><a href="#silver"><img src="images/duke-silver.png" alt="Duke Silver Logo" class="duke-silver"></a></li>
         </ul>   
     </nav>
     <main>
-        <section>
+        <section id="trending">
             <h2>Trending Songs</h2>
-            <div class="trending_song-container">   
+            <section class="trending_song-container">   
                 <div class="song">
                     <img src="images/aloma-cover.png" alt="Aloma Img">
                     <h3 >Aloma</h3>
@@ -52,11 +53,11 @@
                     <h3>Successful Performance</h3>
                     <p>Artist Ricky Bombino</p>
                 </div>
-            </div>
+            </section>
             <button class="btn">More Trending</button>
         </section>
         <section id="playlist">
-            <div class="your_playlist-container">
+            <section class="your_playlist-container">
                 <h2>Your Playlists</h2>
                 <div class="your_songs-container">
                     <div class="your">
@@ -89,7 +90,7 @@
                     </div>
                 </div>
                 <button class="btn">All Your Playlist</button>
-            </div>
+            </section>
             <div class="curated_playlists-container">
                 <h2>Curated Playlists</h2>
                 <div class="curated_songs-container">
